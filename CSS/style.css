@@ -55,6 +55,7 @@
 }
 
 .cloud{
+    bottom: 55%;
     position: absolute;
     width: 400px;
     animation: cloud 9s infinite linear;
