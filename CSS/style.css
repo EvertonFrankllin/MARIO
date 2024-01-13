@@ -1,0 +1,52 @@
+* {
+    /*Definições padões do site*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.GAME{/*div class geral de game*/
+    width: 80%;/*Define o tamanho da tela do jogo*/
+    height: 500px;/*Define a altura da tela do jogo*/
+    border: 1px solid rgb(136, 120, 120);/*define uma borda, o tamanho, tipo solida e com a cor setada*/
+    margin: 0 auto;/*Aqui centralizamos a div na tela*/
+    position: relative;/*Posição absolute, é necessário pq nossas imagens terão posição relativa*/
+    overflow: hidden;/*Essa propriedade oculta tudo que está fora dass delimitações da nossa div*/
+}/*game*/
+
+.pipe{/*div class criada dentro da img pipe*/
+    position: absolute; /*Usamos a position absolute pq as imagens fluirão de um lado para o outro da div pai*/
+    bottom: 0; /*Tiramos todo o espaço do final da div pai, fazendo nossa imagem tocar no final da div*/
+    width: 60px; /*Aqui definimos o tamanho da imagem em pixel*/
+    animation: pipe_animation 3s infinite linear;/*Aqui nós chamamos nossa animação que criamos com kayframe, note que a animação tem 3s de duração é infinita, ou seja, nõa para e é uma animação linear, não tem deley na execução*/
+    
+}/*pipe*/
+
+@keyframes pipe_animation{/*keyframe de animação que chamamos na class pipe*/
+    from{/*diz onde minha animação começa*/
+        right: -80px;/*usei a propriedade right e deixei ela negativa, pq não queria que a imagem brotasse do nada na tela, usei right pq quero que ela inicie da direita para a esquerda*/
+    }
+    to{/*aqui está o final da animation, é 100% da minha div pai*/
+        right: 100%;
+    }
+}/*keyframes*/
+
+.MARIO{
+    right: 70%;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    
+    50%{
+        bottom: 180px;
+    }
+    0%{
+        bottom: 0;
+    }
+}
