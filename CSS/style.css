@@ -4,24 +4,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    margin: 0 auto;
+}
 .GAME{/*div class geral de game*/
-    background: linear-gradient(rgb(78, 78, 255), rgb(154, 154, 207));
-    width: 100%;/*Define o tamanho da tela do jogo*/
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    width: 80%;/*Define o tamanho da tela do jogo*/
     height: 500px;/*Define a altura da tela do jogo*/
-    border: 1px solid rgb(136, 120, 120);/*define uma borda, o tamanho, tipo solida e com a cor setada*/
+    border-bottom: 15px solid rgb(65, 196, 72);/*define uma borda, o tamanho, tipo solida e com a cor setada*/
     margin: 0 auto;/*Aqui centralizamos a div na tela*/
     position: relative;/*Posição absolute, é necessário pq nossas imagens terão posição relativa*/
     overflow: hidden;/*Essa propriedade oculta tudo que está fora dass delimitações da nossa div*/
     border-top:none ;
     
 }/*game*/
+.botao{
+    position: relative;/*Posição absolute, é necessário pq nossas imagens terão posição relativa*/
+}
+.botao input{
+    font-size: 30px;
+    color: white;
+    background-color: rgb(72, 72, 216);
+    margin-top:30px ;
+    margin-left: 35%;
+    width: 400px;
+    height: 60px;
+}
 
 .pipe{/*div class criada dentro da img pipe*/
     position: absolute; /*Usamos a position absolute pq as imagens fluirão de um lado para o outro da div pai*/
     bottom: 0; /*Tiramos todo o espaço do final da div pai, fazendo nossa imagem tocar no final da div*/
-    width: 60px; /*Aqui definimos o tamanho da imagem em pixel*/
-    animation: pipe_animation 2.5s infinite linear;/*Aqui nós chamamos nossa animação que criamos com kayframe, note que a animação tem 3s de duração é infinita, ou seja, nõa para e é uma animação linear, não tem deley na execução*/
-    
+    width: 50px; /*Aqui definimos o tamanho da imagem em pixel*/
+    animation: pipe_animation 1.8s infinite linear;/*Aqui nós chamamos nossa animação que criamos com kayframe, note que a animação tem 3s de duração é infinita, ou seja, nõa para e é uma animação linear, não tem deley na execução*/
+
 }/*pipe*/
 
 @keyframes pipe_animation{/*keyframe de animação que chamamos na class pipe*/
@@ -34,22 +49,37 @@
 }/*keyframes*/
 
 .MARIO{
-    right: 70%;
+    right: 88%;
     position: absolute;
-    bottom: 0;
-    width: 120px;
-    animation: jump 550ms;
+    bottom: 0px;
+    width: 140px;
+    
+}
+.jump{
+    animation: jump 550ms  ease-out;
 }
 
 @keyframes jump {
     0%{
         bottom: 0;
     }
+    30%{
+        bottom: 190px;
+    }
+    40%{
+        bottom: 190px;
+    }
     
     50%{
-        bottom: 180px;
+        bottom: 190px;
     }
-    0%{
+    60%{
+        bottom: 190px;
+    }
+    70%{
+        bottom: 150px;
+    }
+    100%{
         bottom: 0;
     }
 }
@@ -58,9 +88,51 @@
     bottom: 55%;
     position: absolute;
     width: 400px;
-    animation: cloud 9s infinite linear;
+    animation: cloud 8s infinite linear;
+}
+.cloud2{
+    bottom: 55%;
+    position: absolute;
+    width: 400px;
+    animation: cloud2 15s infinite linear;
+}
+.cloud3{
+    bottom: 55%;
+    position: absolute;
+    width: 400px;
+    animation: cloud3 20s infinite linear;
+}
+.cloud4{
+    bottom: 55%;
+    position: absolute;
+    width: 400px;
+    animation: cloud4 9s infinite linear;
 }
 @keyframes cloud {
+    from{/*diz onde minha animação começa*/
+        right: -400px;/*usei a propriedade right e deixei ela negativa, pq não queria que a imagem brotasse do nada na tela, usei right pq quero que ela inicie da direita para a esquerda*/
+    }
+    to{/*aqui está o final da animation, é 100% da minha div pai*/
+        right: 100%;
+    }
+}
+@keyframes cloud2 {
+    from{/*diz onde minha animação começa*/
+        right: -400px;/*usei a propriedade right e deixei ela negativa, pq não queria que a imagem brotasse do nada na tela, usei right pq quero que ela inicie da direita para a esquerda*/
+    }
+    to{/*aqui está o final da animation, é 100% da minha div pai*/
+        right: 100%;
+    }
+}
+@keyframes cloud3 {
+    from{/*diz onde minha animação começa*/
+        right: -400px;/*usei a propriedade right e deixei ela negativa, pq não queria que a imagem brotasse do nada na tela, usei right pq quero que ela inicie da direita para a esquerda*/
+    }
+    to{/*aqui está o final da animation, é 100% da minha div pai*/
+        right: 100%;
+    }
+}
+@keyframes cloud4 {
     from{/*diz onde minha animação começa*/
         right: -400px;/*usei a propriedade right e deixei ela negativa, pq não queria que a imagem brotasse do nada na tela, usei right pq quero que ela inicie da direita para a esquerda*/
     }
