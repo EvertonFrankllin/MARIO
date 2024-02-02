@@ -3,30 +3,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
     margin: 0 auto;
 }
 .GAME{/*div class geral de game*/
     background: linear-gradient(#87ceeb, #e0f6ff);
-    width: 80%;/*Define o tamanho da tela do jogo*/
+    width: 1222px;/*Define o tamanho da tela do jogo*/
     height: 500px;/*Define a altura da tela do jogo*/
     border-bottom: 15px solid rgb(65, 196, 72);/*define uma borda, o tamanho, tipo solida e com a cor setada*/
-    margin: 0 auto;/*Aqui centralizamos a div na tela*/
+    margin: 0px auto;/*Aqui centralizamos a div na tela*/
     position: relative;/*Posição absolute, é necessário pq nossas imagens terão posição relativa*/
     overflow: hidden;/*Essa propriedade oculta tudo que está fora dass delimitações da nossa div*/
     border-top:none ;
+    margin-top: 20px;
     
 }/*game*/
 .botao{
+    display: flex;
     position: relative;/*Posição absolute, é necessário pq nossas imagens terão posição relativa*/
+    justify-content: center;
+    cursor: pointer;
+    margin-top:60px ;
 }
 .botao input{
+    cursor: pointer;
     font-size: 30px;
     color: white;
     background-color: rgb(83, 83, 218);
-    margin-top:30px ;
-    width: 100%;
+    width: 30%;
     height: 60px;
 }
 
@@ -48,7 +54,7 @@ body{
 }/*keyframes*/
 
 .MARIO{
-    right: 88%;
+    right: 1080px;
     position: absolute;
     bottom: 0px;
     width: 140px;
@@ -82,7 +88,13 @@ body{
         bottom: 0;
     }
 }
-
+.reload{
+    bottom: 20%;
+    position: absolute;
+    width: 30px;
+    float: right;
+    margin-left: 49%;
+}
 .cloud{
     bottom: 55%;
     position: absolute;
@@ -139,3 +151,142 @@ body{
         right: 100%;
     }
 }
+
+
+
+/*Manipulando rodapé*/
+.rodape{
+    display: flex;
+    margin-top: 20px;
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    max-height: 100px;
+    background-color: #192123;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contatinho{
+    color: #918c8c;
+    text-align: justify;
+}
+.contatinho span{
+    color: white;
+    font-size: 20px;
+}
+.contatinho p{
+    text-align: justify;
+    font-size: 15px;
+}
+
+.center{
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(90deg,#192123, #2B2F3B );
+    flex-direction: column;
+}
+
+.center a{
+    text-decoration: none;
+    color: #9e67c9;
+}
+
+.social{
+    background-color: #2B2F3B;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;  
+    gap: 15px; 
+}
+
+.social img{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+
+
+
+@media screen and (max-width:1200px) {
+   .GAME{
+    width: 1100px;
+   }
+   .MARIO{
+    right:955px;
+   }
+ }
+
+ @media screen and (max-width:1110px) {
+    .GAME{
+     width: 900px;
+    }
+    .MARIO{
+     right:765px;
+    }
+  }
+  @media screen and (max-width:910px) {
+    .GAME{
+     width: 700px;
+    }
+    .MARIO{
+     right: 560px;
+    }
+  }
+  @media screen and (max-width:710px) {
+    .GAME{
+     width: 500px;
+    }
+    .MARIO{
+     right: 360px;
+    }
+  }
+
+  @media screen and (max-width:510px) {
+    .GAME{
+     width: 400px;
+    }
+    .MARIO{
+         width: 90px;
+         right: 260px;
+    }
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
